@@ -8,6 +8,6 @@ public class WhatsappbotApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(WhatsappbotApplication.class, args);
+		System.out.println("Whatsapp Backend is Running");
 	}
-
 }

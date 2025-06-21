@@ -31,3 +31,6 @@ build/
 
 ### VS Code ###
 .vscode/
+
+# Firebase private key
+src/main/resources/jaruratcare-whatsappbot-74240-firebase-adminsdk-fbsvc-c83131b8cb.json
