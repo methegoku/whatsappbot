@@ -16,10 +16,19 @@ public class FirebaseConfig {
     @PostConstruct
     public void initializeFirebase() {
         try {
+            /*
+                Here, I created Environment Variable in Render and used that for deployment on Render.
+                You can also use your own JSON private key in firebase config.
+                Just remove the lines from (28 to 35) and add this line
+
+                * FileInputStream serviceAccount = new FileInputStream("src/main/resources/your-firebase-file.json"); *
+
+            */
+
             String firebaseConfig = System.getenv("FIREBASE_CONFIG");
 
             if (firebaseConfig == null || firebaseConfig.isEmpty()) {
-                System.err.println("❌ FIREBASE_CONFIG is empty or missing.");
+                System.err.println("FIREBASE_CONFIG is empty or missing.");
                 return;
             }
 
@@ -31,12 +40,12 @@ public class FirebaseConfig {
 
             if (FirebaseApp.getApps().isEmpty()) {
                 FirebaseApp.initializeApp(options);
-                System.out.println("✅ Firebase initialized successfully");
+                System.out.println("Firebase initialized successfully");
             }
 
         } catch (Exception e) {
-            System.err.println("❌ Firebase initialization failed");
-            e.printStackTrace(); // This will show detailed error in Render logs
+            System.err.println("Firebase initialization failed");
+            e.printStackTrace();
         }
     }
 }

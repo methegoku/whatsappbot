@@ -9,3 +9,5 @@ FROM openjdk:17
 WORKDIR /app
 COPY --from=build /app/target/*.jar app.jar
 ENTRYPOINT ["java", "-jar", "app.jar"]
+
+# NOTE : Docker will take care of everything when you run the program.
