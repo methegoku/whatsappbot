@@ -94,8 +94,10 @@ However:
 --- 
 
 ## If you heav any doubts or suggestions, you can contact me..!
-📧 gokulelumalai46@gmail.com
-🌐 https://www.linkedin.com/in/gokul-elumalai-12a203267/
+- 📧 gokulelumalai46@gmail.com
+- 🌐 https://www.linkedin.com/in/gokul-elumalai-12a203267/
+
+--
 
 ## License
 This project is for educational and internal assessment use only. Not for commercial distribution.
