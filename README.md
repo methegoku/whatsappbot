@@ -1,11 +1,12 @@
-# 💬 WhatsApp Chatbot Backend
+#  WhatsApp Chatbot Backend
 
 A Spring Boot backend service designed for a WhatsApp chatbot that responds to user messages, stores chat logs in Firebase Firestore, and is deployed on Render.
+
 P.S. I have created only the backend of the project. We can Intergrate this project with Whatsapp Buisness as it will be added in the future (as I am learning it.)
 
 ---
 
-## 🚀 Features
+##  Features
 
 -  Java Spring Boot backend for chatbot logic
 -  Firebase Firestore integration for message logging
@@ -15,7 +16,7 @@ P.S. I have created only the backend of the project. We can Intergrate this proj
 
 ---
 
-## 📦 Tech Stack
+##  Tech Stack
 
 | Layer          | Tech Used                |
 |----------------|--------------------------|
@@ -28,26 +29,34 @@ P.S. I have created only the backend of the project. We can Intergrate this proj
 
 ---
 
-## ⚙️ API Usage
+##  API Usage
 
 ### POST `/webhook`
 - Used to receive and respond to incoming messages.
-- In Postmam. select POST request as copy paste the JSON format in the body
+- In Postman. select POST request as copy and paste the JSON format in the body
   
-#### 📥 Request JSON:
-```json
+####  Request JSON:
+```
 {
   "from": "user_phone_number",
   "message": "hi"
 }
 ```
-### 📤 Response:
+###  Response:
 
 Welcome to Jarurat Care! Type 1 for Services, 2 for Contact Info
 
 ---
 
-## 📝 Predefined Commands
+## How to Run this Project?
+- First download the project as Zip.
+- Then open in any code editor you like.
+- Make sure that you add your JSON private key `Firebaseconfig.java`. For detailed explanation check the file
+- Inorder to store the data into the database, create a `Firestone` collection in Firebase.
+- Then run the code. Boom! you have your backend of Whatsapp bot.
+
+---
+##  Predefined Commands
 
 | User Input  | Bot Response                                                           |
 |-------------|------------------------------------------------------------------------|
@@ -58,8 +67,8 @@ Welcome to Jarurat Care! Type 1 for Services, 2 for Contact Info
 
 ---
 
-## 🧠 Firebase Setup (Environment Variable)
-### 🔐 Add to Render:
+##  Firebase Setup (Environment Variable)
+###  Add to Render:
 - Go to your Render service dashboard
 - Set environment variable:
 
@@ -73,16 +82,7 @@ Welcome to Jarurat Care! Type 1 for Services, 2 for Contact Info
 
 ---
 
-## Security Note (CVE Warning)
-This project uses the Firebase Admin SDK which currently depends on a version of protobuf-java affected by CVE-2024-7254. 
-However:
-  - This bot does not expose raw Protobuf input
-  - The CVE is not exploitable in this use-case
-  - The team will update the dependency once Firebase releases a patched SDK
-
----
-
-## 🧪 Example Firebase Entry
+##  Example Firebase Entry
 ```
 {
   "from": "user_number",
